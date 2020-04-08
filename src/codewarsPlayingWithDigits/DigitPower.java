@@ -1,3 +1,13 @@
+/*
+ * This is a solution to the codewars problem:
+ * https://www.codewars.com/kata/5552101f47fc5178b1000050/train/java
+ * Solved using TDD processes. Consult Readme for full details.
+ * 
+ * @author  Jamie Wong
+ * @version 13.0.0
+ * @since	08/04/2020
+ */
+
 package codewarsPlayingWithDigits;
 
 public class DigitPower {
@@ -8,14 +18,15 @@ public class DigitPower {
 		for(int i = 0; i < numberAsStringArray.length; i++) {
 			numberAsArray[i] = Integer.parseInt(numberAsStringArray[i]);
 		}
-		int sum = 0;
-		if(number == 89 || numberAsArray.length == 1) {
-			for(int i = 0; i < numberAsStringArray.length; i++) {
-				sum += Math.pow(numberAsArray[i], i+1);
-			}
-			return number/sum;
+		long sum = 0;
+		int indexTracker = 0;
+		for(int i = power; i < numberAsStringArray.length + power; i++) {
+			sum = sum + (long) Math.pow(numberAsArray[indexTracker], i);
+			indexTracker++;
 		}
-		
+		if(sum % number == 0) {
+			return sum/number;
+		}
 		return -1;
 	}
 	
