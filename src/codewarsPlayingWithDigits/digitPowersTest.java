@@ -17,7 +17,8 @@ public class digitPowersTest {
 	}
 
 	@Test
-	public void digitPower_1_1_returnOne() {
+	public void digitPower_powerFrom1_returnOne() {
 		assertEquals(1, DigitPower.digitPower(1, 1));
+		assertEquals(1, DigitPower.digitPower(9, 1));
 	}
 }

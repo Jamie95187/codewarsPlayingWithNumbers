@@ -9,7 +9,7 @@ public class DigitPower {
 			numberAsArray[i] = Integer.parseInt(numberAsStringArray[i]);
 		}
 		int sum = 0;
-		if(number == 89 || number == 1) {
+		if(number == 89 || numberAsArray.length == 1) {
 			for(int i = 0; i < numberAsStringArray.length; i++) {
 				sum += Math.pow(numberAsArray[i], i+1);
 			}
