@@ -1,2 +1,3 @@
 module codewarsPlayingWithDigits {
+	requires junit;
 }
